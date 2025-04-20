@@ -1,3 +1,4 @@
+import 'package:expense_manager/screens/add_expense_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,7 +34,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AddExpenseScreen()),
+            );
+          },
           backgroundColor: Colors.cyan[300],
           child: Icon(Icons.add, color: Colors.black),
         ),
